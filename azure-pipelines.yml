@@ -14,4 +14,11 @@ variables:
 
 steps:
 - script: |
-    echo "name is $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)"
+    echo "name is $(Date:yyyyMMdd)$(Rev:.r)"
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "$(Date:yyyyMMdd)$(Rev:.r)"
