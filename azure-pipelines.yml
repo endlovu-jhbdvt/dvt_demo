@@ -21,4 +21,4 @@ steps:
     script: |
       # Write your PowerShell commands here.
       
-      Write-Host "$(Date:yyyyMMdd)$(Rev:.r)"
+      Write-Host $(Date:yyyyMMdd)$(Rev:.r)
